@@ -5,38 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-  <title>Important Notice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+  <title>Important Cybersecurity Notice</title>
   <style>
     body {
-      padding: 2rem; /* Add some padding to the body */
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .alert {
-      text-align: center; /* Center align the alert content */
-      margin: 0 auto; /* Center the alert horizontally */
-      max-width: 2000px; /* Limit the maximum width of the alert */
+
+    .alert-container {
+      max-width: 800px;
+      background: rgba(18, 18, 18, 0.85);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(255, 79, 90, 0.6), 0 0 50px rgba(255, 79, 90, 0.4);
+      border: 2px solid rgba(255, 79, 90, 0.5);
+      animation: fadeIn 1s ease-in-out;
     }
-    .alert-heading {
-      margin-bottom: 1rem; /* Add some space below the heading */
-      font-family: 'Courier New', monospace; /* Apply monospace font */
+
+    .alert-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      color: #ff4f5a;
+      text-shadow: 0 0 10px rgba(255, 79, 90, 0.8);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      animation: vibrate 0.3s infinite; /* Vibrates the header text */
     }
-    .text-right {
-      margin-top: 1rem; /* Add some space above the ref id */
+
+    .alert-body {
+      color: #d1d5db;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .alert-body p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .alert-body ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+
+    .alert-body ul li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .alert-body ul li i {
+      margin-right: 0.5rem;
+      color: #ff4f5a;
+      font-size: 2rem;
+    }
+
+    .cta-btn {
+      display: block;
+      width: max-content;
+      margin: 1.5rem auto;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #ff416c, #ff4f5a);
+      border: none;
+      border-radius: 24px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none; /* Removes underline */
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 79, 90, 0.6);
+      color: white; /* Keeps text color white */
+      text-decoration: none; /* Ensures underline doesn’t appear on hover */
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 1rem;
+    }
+
+    .footer span {
+      color: #ff4f5a;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes vibrate {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -2px); }
+      75% { transform: translate(-2px, -2px); }
+      100% { transform: translate(2px, 2px); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="alert alert-danger" role="alert">
-      <h4 class="alert-heading"><span class="alert-icon">❗️</span>Important Notice<span class="alert-icon">❗️</span></h4>
-      <ul>
-        Please be advised that the following URL was previously utilized as part of a simulated phishing exercise.<br>
-        It is important to note that this link is no longer active and should not be accessed.<br>
-        The purpose of the simulated exercise was to test and improve our organization's security protocols.<br>
-        We apologize for any confusion or inconvenience this may have caused.<br><br>
-        Thank you for your understanding and cooperation in maintaining the security of our organization.<br>
-      </ul>
+  <div class="alert-container">
+    <div class="alert-header">
+      ❗️Important Cybersecurity Notice ❗️
     </div>
-    <p class="text-right">Ref id: kdn/2223/anm/aeon</p>
+    <div class="alert-body">
+      <p>This URL was previously utilized as part of a simulated phishing assessment conducted for cybersecurity awareness purposes.</p>
+      <p>Please note the following:</p>
+      <ul>
+        <li><i class="fas fa-ban"></i>&nbsp;The link is no longer active and must not be accessed.</li>
+        <li><i class="fas fa-ban"></i>&nbsp;The assessment aimed to strengthen and evaluate our organization’s security measures.</li>
+        <li><i class="fas fa-ban"></i>&nbsp;We apologize for any confusion or inconvenience this may have caused.</li>
+        <li><i class="fas fa-ban"></i>&nbsp;Your cooperation in supporting our ongoing commitment to cybersecurity is greatly appreciated.</li>
+      </ul>
+      <a href="https://en.wikipedia.org/wiki/Simulated_phishing" target="_blank" class="cta-btn">Learn More</a>
+    </div>
+    <div class="footer">
+      Reference ID: <span>kpn/1224/anm/janm</span>
+    </div>
   </div>
 </body>
 </html>
+
